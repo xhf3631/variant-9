@@ -25,7 +25,7 @@ export default function App() {
 
   return (
     <div style={{ padding: "20px", fontFamily: "Arial" }}>
-      <h1>Вариант 9</h1>
+      <h1>Задача 1 - Вариант 9</h1>
 
       <table border={1} cellPadding={10}>
         <thead>
