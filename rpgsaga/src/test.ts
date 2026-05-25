@@ -1,11 +1,21 @@
-import { Knight } from "./players/Knight";
-import { Archer } from "./players/Archer";
+import { HeroFactory } from "./factory/HeroFactory";
+import { Player } from "./players/Player";
 
-const knight = new Knight("Arthur", 100, 10);
+const knight: Player = HeroFactory.createHero(
+  "Knight",
+  "Arthur",
+  100,
+  10,
+);
 
-const archer = new Archer("Eldar", 100, 5);
+const archer: Player = HeroFactory.createHero(
+  "Archer",
+  "Eldar",
+  100,
+  5,
+);
 
-knight.attack(archer);
+(knight as any).attack(archer);
 
 if (archer.getHealth() === 90) {
   console.log("TEST PASSED");
